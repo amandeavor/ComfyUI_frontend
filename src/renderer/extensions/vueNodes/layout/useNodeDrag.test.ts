@@ -2,6 +2,7 @@ import { useCanvasStore } from '@/renderer/core/canvas/canvasStore'
 import { fromPartial } from '@total-typescript/shoehorn'
 import * as VueUse from '@vueuse/core'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { ref } from 'vue'
 
 import { LGraphGroup, LGraphNode } from '@/lib/litegraph/src/litegraph'
 import { AutoPanController } from '@/renderer/core/canvas/useAutoPan'
@@ -30,6 +31,7 @@ const testState = vi.hoisted(() => {
     },
     cancelAnimationFrame: vi.fn(),
     requestAnimationFrameCallback: null as FrameRequestCallback | null,
+    stopDragging: null as (() => void) | null,
     capturedOnPan: {
       current: null as ((dx: number, dy: number) => void) | null
     },
@@ -93,6 +95,7 @@ function pointerEvent(clientX: number, clientY: number): PointerEvent {
 }
 
 beforeEach(() => {
+  Object.assign(layoutStore, { isDraggingVueNodes: ref(false) })
   vi.mocked(layoutStore.getNodeLayout).mockImplementation(
     (_rootGraphId, nodeId) => {
       const layout = testState.nodeLayouts.get(nodeId)
@@ -105,13 +108,14 @@ beforeEach(() => {
       y: y / (testState.mockDs.scale || 1) - testState.mockDs.offset[1]
     })
   )
-  vi.mocked(VueUse.whenever).mockImplementation(() =>
-    Object.assign(vi.fn(), {
+  vi.mocked(VueUse.whenever).mockImplementation((_source, callback) => {
+    testState.stopDragging = () => callback(true, undefined, vi.fn())
+    return Object.assign(vi.fn(), {
       pause: vi.fn(),
       resume: vi.fn(),
       stop: vi.fn()
     })
-  )
+  })
   vi.mocked(AutoPanController).mockImplementation(function (opts) {
     const controller = {
       updatePointer: vi.fn(),
@@ -130,6 +134,7 @@ beforeEach(() => {
     (pos: { x: number; y: number }) => pos
   )
   testState.requestAnimationFrameCallback = null
+  testState.stopDragging = null
   testState.capturedOnPan.current = null
   testState.capturedAutoPanInstance.current = null
   testState.mockDs.offset = [0, 0]
@@ -261,6 +266,26 @@ describe('useNodeDrag', () => {
       ],
       { source: LayoutSource.Vue }
     )
+  })
+
+  it('cancels pending movement when dragging is interrupted', () => {
+    Object.assign(useCanvasStore(), { selectedNodeIds: new Set([node1]) })
+    testState.nodeLayouts.set('1', {
+      position: { x: 50, y: 80 },
+      size: { width: 180, height: 110 }
+    })
+    const { startDrag, handleDrag } = useNodeDrag()
+    layoutStore.isDraggingVueNodes.value = true
+    startDrag(pointerEvent(5, 10), node1)
+    handleDrag(pointerEvent(25, 30), node1)
+
+    layoutStore.isDraggingVueNodes.value = false
+    testState.stopDragging?.()
+
+    expect(testState.cancelAnimationFrame).toHaveBeenCalledWith(1)
+    expect(testState.mutationFns.batchMoveNodes).not.toHaveBeenCalled()
+    handleDrag(pointerEvent(45, 50), node1)
+    expect(testState.mutationFns.batchMoveNodes).not.toHaveBeenCalled()
   })
 })
 
