@@ -106,6 +106,7 @@ function runButtonProperties(
     is_app_mode: false,
     dock_state: 'docked',
     agent_panel_open: false,
+    agent_thread_id: null,
     ...overrides
   }
 }
@@ -576,7 +577,9 @@ describe('PostHogTelemetryProvider', () => {
       const provider = createProvider()
       await vi.dynamicImportSettled()
 
-      provider.trackRunButton(runButtonProperties())
+      provider.trackRunButton(
+        runButtonProperties({ agent_thread_id: 'thread-42' })
+      )
       provider.trackWorkflowExecution()
 
       expect(hoisted.mockCapture).toHaveBeenCalledWith(
@@ -585,18 +588,23 @@ describe('PostHogTelemetryProvider', () => {
           ...hoisted.executionContext,
           trigger_source: 'keybinding',
           agent_panel_open: false,
+          agent_thread_id: 'thread-42',
           event_source: 'web-sdk'
         }
       )
 
       provider.trackWorkflowExecution()
 
+      // The run-button carry-over is consumed by the first execution_start, so
+      // a second one reports the unattributed defaults rather than repeating
+      // the previous run's thread.
       expect(hoisted.mockCapture).toHaveBeenLastCalledWith(
         TelemetryEvents.EXECUTION_START,
         {
           ...hoisted.executionContext,
           trigger_source: 'unknown',
           agent_panel_open: false,
+          agent_thread_id: null,
           event_source: 'web-sdk'
         }
       )
