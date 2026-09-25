@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import type { Ref } from 'vue'
 import { computed, ref } from 'vue'
 
 import type { AgentMessages, TurnId } from '../../schemas/agentApiSchema'
@@ -78,7 +79,7 @@ export const useAgentConversationStore = defineStore(
     // has nothing left pending.
     const settledActiveTransports = new Set<AgentEventTransport>()
     const backgroundTurns = new Map<string, BackgroundTurn>()
-    let hydratedMessageIds = new Set<string>()
+    let hydratedTurnIdsByRowId = new Map<string, TurnId>()
     let hydratedAssistantTurnIds = new Set<TurnId>()
     const activeIndex = ref(-1)
 
@@ -305,7 +306,7 @@ export const useAgentConversationStore = defineStore(
       if (
         entry.settled &&
         !poppedHydratedCopy &&
-        hydratedMessageIds.has(entry.messageId)
+        hydratedTurnIdsByRowId.has(entry.messageId)
       ) {
         // The persisted, authoritative copy is already on screen (kept, via
         // the filter above) -- this entry's transport is now discarded for
@@ -314,6 +315,7 @@ export const useAgentConversationStore = defineStore(
         entry.transport.dispose()
         return
       }
+      if (!poppedHydratedCopy) adoptHydratedTurn(entry, kept)
       if (
         entry.userText !== undefined &&
         !userTexts.value.has(entry.message.id)
@@ -334,6 +336,42 @@ export const useAgentConversationStore = defineStore(
       activeIndex.value = index
       transport = entry.transport
       liveMessage = entry.message
+    }
+
+    function moveTurnRecord<T>(
+      record: Ref<Map<TurnId, T>>,
+      from: TurnId,
+      to: TurnId
+    ): void {
+      const value = record.value.get(from)
+      if (value === undefined) return
+      record.value.delete(from)
+      record.value.set(to, value)
+    }
+
+    /**
+     * A turn stashed mid-flight and hydrated while away comes back as two
+     * messages: the stash under the live turn id, and the hydrated copy under
+     * the server's turn_id. They are one turn -- the live id IS the assistant
+     * ROW's id (services/agent/server/agent_handler.go), which is why a row id
+     * resolves it -- and neither dedupe path above catches that. The stash
+     * holds the live transport and the deltas that arrived while away, the
+     * copy holds the user-side record hydrate() rebuilt; so the copy goes and
+     * its record moves onto the live turn.
+     */
+    function adoptHydratedTurn(
+      entry: BackgroundTurn,
+      kept: AssistantMessage[]
+    ): void {
+      const hydratedTurnId = hydratedTurnIdsByRowId.get(entry.messageId)
+      if (hydratedTurnId === undefined || hydratedTurnId === entry.message.id)
+        return
+      const index = kept.findIndex((message) => message.id === hydratedTurnId)
+      if (index < 0) return
+      kept.splice(index, 1)
+      moveTurnRecord(userTexts, hydratedTurnId, entry.message.id)
+      moveTurnRecord(userAttachments, hydratedTurnId, entry.message.id)
+      moveTurnRecord(userWorkflowReferences, hydratedTurnId, entry.message.id)
     }
 
     function removeHydratedCopy(
@@ -412,7 +450,7 @@ export const useAgentConversationStore = defineStore(
       latestWorkflowId.value = undefined
       dropAttachmentPreviews()
       threadId.value = null
-      hydratedMessageIds = new Set()
+      hydratedTurnIdsByRowId = new Map()
       hydratedAssistantTurnIds = new Set()
       clearActive()
     }
@@ -426,7 +464,7 @@ export const useAgentConversationStore = defineStore(
       userTags.value = new Map()
       userWorkflowReferences.value = transcript.userWorkflowReferences
       latestWorkflowId.value = transcript.latestWorkflowId
-      hydratedMessageIds = transcript.rowIds
+      hydratedTurnIdsByRowId = transcript.turnIdsByRowId
       hydratedAssistantTurnIds = transcript.assistantTurnIds
       dropAttachmentPreviews()
       userAttachments.value = transcript.userAttachments
