@@ -9,7 +9,6 @@
       "signInCaption": "合作伙伴节点需要账户",
       "signInToRun": "登录以运行"
     },
-    "share": "分享",
     "shareTooltip": "分享工作流"
   },
   "agent": {
@@ -717,6 +716,8 @@
         "selectAtLeastOne": "请至少选择一个选项。"
       },
       "intro": "帮助我们为您定制 ComfyUI 体验。",
+      "navigationFailed": "调查问卷已保存，但新手引导无法继续",
+      "navigationFailedDetail": "请重试。",
       "options": {
         "experience": {
           "new": "ComfyUI 新手",
@@ -757,6 +758,8 @@
       },
       "otherPlaceholder": "请告诉我们更多",
       "placeholder": "调查问题占位符",
+      "submitFailed": "无法提交调查问卷",
+      "submitFailedDetail": "您的回答未保存。请重试。",
       "title": "云调研"
     }
   },
@@ -2100,6 +2103,9 @@
     "updating": "正在更新 {id}",
     "upload": "上传",
     "uploadAlreadyInProgress": "上传已在进行中",
+    "uploadFailed": "上传失败：{reason}",
+    "uploadFileTooLarge": "文件太大，无法上传。",
+    "uploadFileTooLargeWithLimit": "文件太大，无法上传（限制：{limit} MB）。",
     "uploadTimedOut": "上传超时。请重试。",
     "usageHint": "使用提示",
     "use": "使用",
@@ -3090,6 +3096,7 @@
     "Refresh Node Definitions": "刷新节点定义",
     "Reinstall": "重装",
     "Rename": "重命名",
+    "Replay Onboarding": "重新开始新手引导",
     "Reset View": "重置视图",
     "Resize Selected Nodes": "调整选定节点的大小",
     "Restart": "重启",
@@ -3282,6 +3289,7 @@
     "mask": "遮罩",
     "merging": "合并",
     "mesh": "网格",
+    "ming image": "ming 图像",
     "minimax": "minimax",
     "minimax music": "minimax 音乐",
     "mochi": "mochi",
@@ -3542,6 +3550,12 @@
     "next": "下一步",
     "skip": "跳过",
     "stepLabel": "第 {current} 步，共 {total} 步"
+  },
+  "onboardingReplay": {
+    "confirmMessage": "这将重新加载 ComfyUI，并重置此环境中可用的新手引导步骤。不会影响您的工作流。",
+    "confirmTitle": "重新进行新手引导？",
+    "failedDetail": "无法重置您的新手引导状态。请重试。",
+    "failedSummary": "无法重新进行新手引导"
   },
   "openSharedWorkflow": {
     "author": "作者：",
@@ -4812,6 +4826,7 @@
     "clearAllFilters": "清除所有筛选器",
     "error": {
       "loading": "无法打开该模板。请重试。",
+      "preparingMedia": "部分示例媒体无法准备。工作流将会打开；请为所有缺失的输入选择自己的文件。",
       "templateNotFound": "未找到模板 \"{templateName}\""
     },
     "filtersApplied": "已应用 {count} 个筛选器",
@@ -4828,6 +4843,7 @@
       "credits": "使用积分运行",
       "title": "高级模板"
     },
+    "preparingMedia": "正在准备示例媒体...",
     "resultsCount": "显示 {count} / 共 {total} 个模板",
     "runsOnFilter": "运行于",
     "runsOnSelected": "{count} 次运行",

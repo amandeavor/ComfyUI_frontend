@@ -9,7 +9,6 @@
       "signInCaption": "Partner-Nodes erfordern ein Konto",
       "signInToRun": "Zum Ausführen anmelden"
     },
-    "share": "Teilen",
     "shareTooltip": "Workflow teilen"
   },
   "agent": {
@@ -717,6 +716,8 @@
         "selectAtLeastOne": "Bitte wählen Sie mindestens eine Option aus."
       },
       "intro": "Ein paar kurze Fragen, damit wir ComfyUI für Sie einrichten können.",
+      "navigationFailed": "Umfrage gespeichert, aber das Onboarding konnte nicht fortgesetzt werden",
+      "navigationFailedDetail": "Bitte versuchen Sie es erneut.",
       "options": {
         "experience": {
           "new": "Neu bei ComfyUI",
@@ -757,6 +758,8 @@
       },
       "otherPlaceholder": "Erzählen Sie uns mehr",
       "placeholder": "Platzhalter für Umfragefragen",
+      "submitFailed": "Die Umfrage konnte nicht übermittelt werden",
+      "submitFailedDetail": "Ihre Antworten wurden nicht gespeichert. Bitte versuchen Sie es erneut.",
       "title": "Lernen wir Sie kennen"
     }
   },
@@ -2100,6 +2103,9 @@
     "updating": "Aktualisierung von {id}",
     "upload": "Hochladen",
     "uploadAlreadyInProgress": "Upload läuft bereits",
+    "uploadFailed": "Upload fehlgeschlagen: {reason}",
+    "uploadFileTooLarge": "Die Datei ist zu groß zum Hochladen.",
+    "uploadFileTooLargeWithLimit": "Die Datei ist zu groß zum Hochladen (Limit: {limit} MB).",
     "uploadTimedOut": "Zeitüberschreitung beim Upload. Bitte versuchen Sie es erneut.",
     "usageHint": "Nutzungshinweis",
     "use": "Verwenden",
@@ -3090,6 +3096,7 @@
     "Refresh Node Definitions": "Node-Definitionen aktualisieren",
     "Reinstall": "Neu installieren",
     "Rename": "Umbenennen",
+    "Replay Onboarding": "Onboarding erneut abspielen",
     "Reset View": "Ansicht zurücksetzen",
     "Resize Selected Nodes": "Größe ausgewählter Nodes ändern",
     "Restart": "Neu starten",
@@ -3282,6 +3289,7 @@
     "mask": "Maskierung",
     "merging": "Zusammenführen",
     "mesh": "Mesh",
+    "ming image": "ming image",
     "minimax": "minimax",
     "minimax music": "minimax music",
     "mochi": "mochi",
@@ -3542,6 +3550,12 @@
     "next": "Weiter",
     "skip": "Überspringen",
     "stepLabel": "Schritt {current} von {total}"
+  },
+  "onboardingReplay": {
+    "confirmMessage": "Dadurch wird ComfyUI neu geladen und die in dieser Umgebung verfügbaren Onboarding-Schritte werden zurückgesetzt. Ihre Workflows sind davon nicht betroffen.",
+    "confirmTitle": "Onboarding erneut abspielen?",
+    "failedDetail": "Ihr Onboarding-Status konnte nicht zurückgesetzt werden. Bitte versuchen Sie es erneut.",
+    "failedSummary": "Onboarding konnte nicht erneut abgespielt werden"
   },
   "openSharedWorkflow": {
     "author": "Autor:",
@@ -4812,6 +4826,7 @@
     "clearAllFilters": "Alle Filter zurücksetzen",
     "error": {
       "loading": "Die Vorlage konnte nicht geöffnet werden. Bitte versuchen Sie es erneut.",
+      "preparingMedia": "Einige Beispielmedien konnten nicht vorbereitet werden. Der Workflow wird geöffnet; wählen Sie für fehlende Eingaben eigene Dateien aus.",
       "templateNotFound": "Vorlage \"{templateName}\" nicht gefunden"
     },
     "filtersApplied": "{count} Filter angewendet | {count} Filter angewendet",
@@ -4828,6 +4843,7 @@
       "credits": "Wird mit Credits ausgeführt",
       "title": "Premium-Vorlage"
     },
+    "preparingMedia": "Beispielmedien werden vorbereitet...",
     "resultsCount": "{count} von {total} Vorlagen werden angezeigt",
     "runsOnFilter": "Läuft auf",
     "runsOnSelected": "{count} Plattformen",

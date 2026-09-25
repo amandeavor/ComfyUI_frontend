@@ -9,7 +9,6 @@
       "signInCaption": "گره‌های شریک به حساب کاربری نیاز دارند",
       "signInToRun": "برای اجرا وارد شوید"
     },
-    "share": "اشتراک‌گذاری",
     "shareTooltip": "اشتراک‌گذاری گردش‌کار"
   },
   "agent": {
@@ -717,6 +716,8 @@
         "selectAtLeastOne": "لطفاً حداقل یک گزینه را انتخاب کنید."
       },
       "intro": "به ما کمک کنید تا تجربه شما از ComfyUI را متناسب‌سازی کنیم.",
+      "navigationFailed": "نظرسنجی ذخیره شد، اما فرایند آشنایی اولیه ادامه نیافت",
+      "navigationFailedDetail": "لطفاً دوباره تلاش کنید.",
       "options": {
         "experience": {
           "new": "جدید در ComfyUI",
@@ -757,6 +758,8 @@
       },
       "otherPlaceholder": "بیشتر توضیح دهید",
       "placeholder": "جای‌نگهدار سوالات نظرسنجی",
+      "submitFailed": "ارسال نظرسنجی ممکن نشد",
+      "submitFailedDetail": "پاسخ‌های شما ذخیره نشدند. لطفاً دوباره تلاش کنید.",
       "title": "نظرسنجی ابری"
     }
   },
@@ -2100,6 +2103,9 @@
     "updating": "در حال به‌روزرسانی {id}",
     "upload": "بارگذاری",
     "uploadAlreadyInProgress": "بارگذاری در حال انجام است",
+    "uploadFailed": "بارگذاری ناموفق بود: {reason}",
+    "uploadFileTooLarge": "فایل برای بارگذاری بیش از حد بزرگ است.",
+    "uploadFileTooLargeWithLimit": "فایل برای بارگذاری بیش از حد بزرگ است (حد: {limit} MB).",
     "uploadTimedOut": "زمان بارگذاری به پایان رسید. لطفاً دوباره تلاش کنید.",
     "usageHint": "راهنمای استفاده",
     "use": "استفاده",
@@ -3090,6 +3096,7 @@
     "Refresh Node Definitions": "به‌روزرسانی تعاریف Node",
     "Reinstall": "نصب مجدد",
     "Rename": "تغییر نام",
+    "Replay Onboarding": "اجرای مجدد فرایند آشنایی اولیه",
     "Reset View": "بازنشانی نما",
     "Resize Selected Nodes": "تغییر اندازه Nodeهای انتخاب‌شده",
     "Restart": "راه‌اندازی مجدد",
@@ -3282,6 +3289,7 @@
     "mask": "ماسک",
     "merging": "ادغام",
     "mesh": "mesh",
+    "ming image": "تصویر مینگ",
     "minimax": "minimax",
     "minimax music": "minimax music",
     "mochi": "mochi",
@@ -3542,6 +3550,12 @@
     "next": "بعدی",
     "skip": "رد کردن",
     "stepLabel": "گام {current} از {total}"
+  },
+  "onboardingReplay": {
+    "confirmMessage": "با این کار ComfyUI دوباره بارگذاری می‌شود و مراحل آشنایی اولیهٔ موجود در این محیط بازنشانی می‌شوند. workflowهای شما تحت تأثیر قرار نمی‌گیرند.",
+    "confirmTitle": "فرایند آشنایی اولیه دوباره اجرا شود؟",
+    "failedDetail": "وضعیت آشنایی اولیهٔ شما بازنشانی نشد. لطفاً دوباره تلاش کنید.",
+    "failedSummary": "اجرای مجدد فرایند آشنایی اولیه ممکن نشد"
   },
   "openSharedWorkflow": {
     "author": "نویسنده:",
@@ -4812,6 +4826,7 @@
     "clearAllFilters": "حذف همه فیلترها",
     "error": {
       "loading": "باز کردن الگو ممکن نشد. لطفاً دوباره تلاش کنید.",
+      "preparingMedia": "برخی از رسانه‌های نمونه آماده نشدند. workflow باز خواهد شد؛ برای هر ورودیِ مفقود، فایل‌های خود را انتخاب کنید.",
       "templateNotFound": "قالب \"{templateName}\" یافت نشد"
     },
     "filtersApplied": "{count} فیلتر اعمال شد | {count} فیلتر اعمال شدند",
@@ -4828,6 +4843,7 @@
       "credits": "با اعتبار اجرا می‌شود",
       "title": "قالب ویژه"
     },
+    "preparingMedia": "در حال آماده‌سازی رسانه‌های نمونه...",
     "resultsCount": "نمایش {count} از {total} قالب",
     "runsOnFilter": "اجرا روی",
     "runsOnSelected": "{count} اجرا روی",

@@ -9,7 +9,6 @@
       "signInCaption": "İş ortağı düğümleri hesap gerektirir",
       "signInToRun": "Çalıştırmak için oturum açın"
     },
-    "share": "Paylaş",
     "shareTooltip": "İş akışını paylaş"
   },
   "agent": {
@@ -717,6 +716,8 @@
         "selectAtLeastOne": "Lütfen en az bir seçenek seçin."
       },
       "intro": "ComfyUI deneyiminizi size özel hale getirmemize yardımcı olun.",
+      "navigationFailed": "Anket kaydedildi, ancak başlangıç kurulumu devam edemedi",
+      "navigationFailedDetail": "Lütfen tekrar deneyin.",
       "options": {
         "experience": {
           "new": "ComfyUI'ye yeni",
@@ -757,6 +758,8 @@
       },
       "otherPlaceholder": "Daha fazla bilgi verin",
       "placeholder": "Anket soruları yer tutucusu",
+      "submitFailed": "Anket gönderilemedi",
+      "submitFailedDetail": "Yanıtlarınız kaydedilmedi. Lütfen tekrar deneyin.",
       "title": "Bulut Anketi"
     }
   },
@@ -2100,6 +2103,9 @@
     "updating": "{id} güncelleniyor",
     "upload": "Yükle",
     "uploadAlreadyInProgress": "Yükleme zaten devam ediyor",
+    "uploadFailed": "Yükleme başarısız oldu: {reason}",
+    "uploadFileTooLarge": "Dosya yüklemek için çok büyük.",
+    "uploadFileTooLargeWithLimit": "Dosya yüklemek için çok büyük (sınır: {limit} MB).",
     "uploadTimedOut": "Yükleme zaman aşımına uğradı. Lütfen tekrar deneyin.",
     "usageHint": "Kullanım ipucu",
     "use": "Kullan",
@@ -3090,6 +3096,7 @@
     "Refresh Node Definitions": "Düğüm Tanımlarını Yenile",
     "Reinstall": "Yeniden Yükle",
     "Rename": "Yeniden Adlandır",
+    "Replay Onboarding": "Başlangıç Kurulumunu Yeniden Oynat",
     "Reset View": "Görünümü Sıfırla",
     "Resize Selected Nodes": "Seçili Düğümleri Yeniden Boyutlandır",
     "Restart": "Yeniden Başlat",
@@ -3282,6 +3289,7 @@
     "mask": "maske",
     "merging": "birleştirme",
     "mesh": "mesh",
+    "ming image": "ming image",
     "minimax": "minimax",
     "minimax music": "minimax music",
     "mochi": "mochi",
@@ -3542,6 +3550,12 @@
     "next": "İleri",
     "skip": "Atla",
     "stepLabel": "Adım {current} / {total}"
+  },
+  "onboardingReplay": {
+    "confirmMessage": "Bu işlem ComfyUI'yi yeniden yükler ve bu ortamda kullanılabilen başlangıç kurulumu adımlarını sıfırlar. İş akışlarınız etkilenmez.",
+    "confirmTitle": "Başlangıç kurulumu yeniden oynatılsın mı?",
+    "failedDetail": "Başlangıç kurulumunuzun durumu sıfırlanamadı. Lütfen tekrar deneyin.",
+    "failedSummary": "Başlangıç kurulumu yeniden oynatılamadı"
   },
   "openSharedWorkflow": {
     "author": "Yazar:",
@@ -4812,6 +4826,7 @@
     "clearAllFilters": "Tüm filtreleri temizle",
     "error": {
       "loading": "Şablon açılamadı. Lütfen tekrar deneyin.",
+      "preparingMedia": "Bazı örnek medya hazırlanamadı. İş akışı açılacak; eksik girişler için kendi dosyalarınızı seçin.",
       "templateNotFound": "\"{templateName}\" şablonu bulunamadı"
     },
     "filtersApplied": "{count} filtre uygulandı | {count} filtre uygulandı",
@@ -4828,6 +4843,7 @@
       "credits": "Kredilerle çalışır",
       "title": "Premium şablon"
     },
+    "preparingMedia": "Örnek medya hazırlanıyor...",
     "resultsCount": "{total} şablondan {count} tanesi gösteriliyor",
     "runsOnFilter": "Üzerinde çalışır",
     "runsOnSelected": "{count} Üzerinde Çalışır",

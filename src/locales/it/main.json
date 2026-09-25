@@ -9,7 +9,6 @@
       "signInCaption": "I nodi partner richiedono un account",
       "signInToRun": "Accedi per eseguire"
     },
-    "share": "Condividi",
     "shareTooltip": "Condividi workflow"
   },
   "agent": {
@@ -717,6 +716,8 @@
         "selectAtLeastOne": "Seleziona almeno un'opzione."
       },
       "intro": "Alcune domande rapide per configurare ComfyUI per te.",
+      "navigationFailed": "Questionario salvato, ma non è stato possibile continuare la procedura guidata iniziale",
+      "navigationFailedDetail": "Riprova.",
       "options": {
         "experience": {
           "new": "Nuovo su ComfyUI",
@@ -757,6 +758,8 @@
       },
       "otherPlaceholder": "Raccontaci di più",
       "placeholder": "Segnaposto domande del sondaggio",
+      "submitFailed": "Impossibile inviare il questionario",
+      "submitFailedDetail": "Le tue risposte non sono state salvate. Riprova.",
       "title": "Conosciamoci meglio"
     }
   },
@@ -2100,6 +2103,9 @@
     "updating": "Aggiornamento di {id}",
     "upload": "Carica",
     "uploadAlreadyInProgress": "Caricamento già in corso",
+    "uploadFailed": "Caricamento non riuscito: {reason}",
+    "uploadFileTooLarge": "Il file è troppo grande per il caricamento.",
+    "uploadFileTooLargeWithLimit": "Il file è troppo grande per il caricamento (limite: {limit} MB).",
     "uploadTimedOut": "Caricamento scaduto. Riprova.",
     "usageHint": "Suggerimento d'uso",
     "use": "Usa",
@@ -3090,6 +3096,7 @@
     "Refresh Node Definitions": "Aggiorna definizioni dei nodi",
     "Reinstall": "Reinstalla",
     "Rename": "Rinomina",
+    "Replay Onboarding": "Ripeti la procedura guidata iniziale",
     "Reset View": "Reimposta vista",
     "Resize Selected Nodes": "Ridimensiona nodi selezionati",
     "Restart": "Riavvia",
@@ -3282,6 +3289,7 @@
     "mask": "maschera",
     "merging": "fusione",
     "mesh": "mesh",
+    "ming image": "immagine ming",
     "minimax": "minimax",
     "minimax music": "minimax music",
     "mochi": "mochi",
@@ -3542,6 +3550,12 @@
     "next": "Avanti",
     "skip": "Salta",
     "stepLabel": "Passo {current} di {total}"
+  },
+  "onboardingReplay": {
+    "confirmMessage": "Questa operazione ricarica ComfyUI e reimposta i passaggi della procedura guidata iniziale disponibili in questo ambiente. I tuoi workflow non vengono modificati.",
+    "confirmTitle": "Ripetere la procedura guidata iniziale?",
+    "failedDetail": "Non è stato possibile reimpostare lo stato della procedura guidata iniziale. Riprova.",
+    "failedSummary": "Impossibile ripetere la procedura guidata iniziale"
   },
   "openSharedWorkflow": {
     "author": "Autore:",
@@ -4812,6 +4826,7 @@
     "clearAllFilters": "Cancella tutti i filtri",
     "error": {
       "loading": "Non è stato possibile aprire il modello. Riprova.",
+      "preparingMedia": "Non è stato possibile preparare alcuni contenuti multimediali di esempio. Il workflow verrà aperto; scegli i tuoi file per gli input mancanti.",
       "templateNotFound": "Modello \"{templateName}\" non trovato"
     },
     "filtersApplied": "{count} filtro applicato | {count} filtri applicati",
@@ -4828,6 +4843,7 @@
       "credits": "Richiede crediti",
       "title": "Modello premium"
     },
+    "preparingMedia": "Preparazione dei contenuti multimediali di esempio...",
     "resultsCount": "Visualizzazione di {count} su {total} modelli",
     "runsOnFilter": "Eseguito su",
     "runsOnSelected": "{count} eseguito su",

@@ -9,7 +9,6 @@
       "signInCaption": "パートナーノードにはアカウントが必要です",
       "signInToRun": "実行するにはサインイン"
     },
-    "share": "共有",
     "shareTooltip": "ワークフローを共有"
   },
   "agent": {
@@ -717,6 +716,8 @@
         "selectAtLeastOne": "少なくとも1つ選択してください。"
       },
       "intro": "ComfyUIの体験をより最適化するためにご協力ください。",
+      "navigationFailed": "アンケートは保存されましたが、オンボーディングを続行できませんでした",
+      "navigationFailedDetail": "もう一度お試しください。",
       "options": {
         "experience": {
           "new": "ComfyUIは初めて",
@@ -757,6 +758,8 @@
       },
       "otherPlaceholder": "詳細をお聞かせください",
       "placeholder": "アンケート質問のプレースホルダー",
+      "submitFailed": "アンケートを送信できませんでした",
+      "submitFailedDetail": "回答は保存されませんでした。もう一度お試しください。",
       "title": "クラウドアンケート"
     }
   },
@@ -2100,6 +2103,9 @@
     "updating": "{id}を更新中",
     "upload": "アップロード",
     "uploadAlreadyInProgress": "アップロードはすでに進行中です",
+    "uploadFailed": "アップロードに失敗しました: {reason}",
+    "uploadFileTooLarge": "ファイルが大きすぎてアップロードできません。",
+    "uploadFileTooLargeWithLimit": "ファイルが大きすぎてアップロードできません（上限: {limit} MB）。",
     "uploadTimedOut": "アップロードがタイムアウトしました。もう一度お試しください。",
     "usageHint": "使用ヒント",
     "use": "使用",
@@ -3090,6 +3096,7 @@
     "Refresh Node Definitions": "ノード定義を更新",
     "Reinstall": "再インストール",
     "Rename": "名前を変更",
+    "Replay Onboarding": "オンボーディングを再実行",
     "Reset View": "ビューをリセット",
     "Resize Selected Nodes": "選択したノードのサイズ変更",
     "Restart": "再起動",
@@ -3282,6 +3289,7 @@
     "mask": "マスク",
     "merging": "マージ",
     "mesh": "メッシュ",
+    "ming image": "ming image",
     "minimax": "minimax",
     "minimax music": "minimax music",
     "mochi": "mochi",
@@ -3542,6 +3550,12 @@
     "next": "次へ",
     "skip": "スキップ",
     "stepLabel": "ステップ {current} / {total}"
+  },
+  "onboardingReplay": {
+    "confirmMessage": "これによりComfyUIが再読み込みされ、この環境で利用可能なオンボーディング手順がリセットされます。ワークフローには影響しません。",
+    "confirmTitle": "オンボーディングを再実行しますか？",
+    "failedDetail": "オンボーディングの状態をリセットできませんでした。もう一度お試しください。",
+    "failedSummary": "オンボーディングを再実行できませんでした"
   },
   "openSharedWorkflow": {
     "author": "作成者：",
@@ -4812,6 +4826,7 @@
     "clearAllFilters": "すべてのフィルターをクリア",
     "error": {
       "loading": "テンプレートを開けませんでした。もう一度お試しください。",
+      "preparingMedia": "一部のサンプルメディアを準備できませんでした。ワークフローは開きます。不足している入力にはご自身のファイルを選択してください。",
       "templateNotFound": "テンプレート「{templateName}」が見つかりません"
     },
     "filtersApplied": "{count} 件のフィルターが適用されました",
@@ -4828,6 +4843,7 @@
       "credits": "クレジットで実行",
       "title": "プレミアムテンプレート"
     },
+    "preparingMedia": "サンプルメディアを準備しています...",
     "resultsCount": "{total}件中{count}件のテンプレートを表示中",
     "runsOnFilter": "実行環境",
     "runsOnSelected": "{count} 回実行",

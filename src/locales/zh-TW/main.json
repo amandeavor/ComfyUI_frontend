@@ -9,7 +9,6 @@
       "signInCaption": "合作夥伴節點需要帳戶",
       "signInToRun": "登入以執行"
     },
-    "share": "分享",
     "shareTooltip": "分享工作流程"
   },
   "agent": {
@@ -717,6 +716,8 @@
         "selectAtLeastOne": "請至少選擇一個選項。"
       },
       "intro": "協助我們為您量身打造 ComfyUI 體驗。",
+      "navigationFailed": "問卷已儲存，但無法繼續進行新手導覽",
+      "navigationFailedDetail": "請再試一次。",
       "options": {
         "experience": {
           "new": "ComfyUI 新手",
@@ -757,6 +758,8 @@
       },
       "otherPlaceholder": "請告訴我們更多",
       "placeholder": "問卷問題佔位符",
+      "submitFailed": "無法提交問卷",
+      "submitFailedDetail": "您的回答未儲存。請再試一次。",
       "title": "雲端問卷"
     }
   },
@@ -2100,6 +2103,9 @@
     "updating": "正在更新 {id}",
     "upload": "上傳",
     "uploadAlreadyInProgress": "上傳已在進行中",
+    "uploadFailed": "上傳失敗：{reason}",
+    "uploadFileTooLarge": "檔案太大，無法上傳。",
+    "uploadFileTooLargeWithLimit": "檔案太大，無法上傳（上限：{limit} MB）。",
     "uploadTimedOut": "上傳逾時。請再試一次。",
     "usageHint": "使用提示",
     "use": "使用",
@@ -3090,6 +3096,7 @@
     "Refresh Node Definitions": "重新整理節點定義",
     "Reinstall": "重新安裝",
     "Rename": "重新命名",
+    "Replay Onboarding": "重新啟動新手導覽",
     "Reset View": "重設視圖",
     "Resize Selected Nodes": "調整選取節點大小",
     "Restart": "重新啟動",
@@ -3282,6 +3289,7 @@
     "mask": "遮罩",
     "merging": "合併",
     "mesh": "網格",
+    "ming image": "ming 圖像",
     "minimax": "minimax",
     "minimax music": "minimax 音樂",
     "mochi": "mochi",
@@ -3542,6 +3550,12 @@
     "next": "下一步",
     "skip": "跳過",
     "stepLabel": "步驟 {current} / {total}"
+  },
+  "onboardingReplay": {
+    "confirmMessage": "這會重新載入 ComfyUI，並重設此環境中可用的新手導覽步驟。您的工作流程不會受到影響。",
+    "confirmTitle": "要重新啟動新手導覽嗎？",
+    "failedDetail": "無法重設您的新手導覽狀態。請再試一次。",
+    "failedSummary": "無法重新啟動新手導覽"
   },
   "openSharedWorkflow": {
     "author": "作者：",
@@ -4812,6 +4826,7 @@
     "clearAllFilters": "清除所有篩選器",
     "error": {
       "loading": "無法開啟範本。請再試一次。",
+      "preparingMedia": "部分範例媒體無法準備。工作流程將會開啟；請為任何缺少的輸入選擇自己的檔案。",
       "templateNotFound": "找不到範本 \"{templateName}\""
     },
     "filtersApplied": "已套用 {count} 個篩選器",
@@ -4828,6 +4843,7 @@
       "credits": "需使用點數執行",
       "title": "高級範本"
     },
+    "preparingMedia": "正在準備範例媒體...",
     "resultsCount": "顯示 {count} 個範本（共 {total} 個）",
     "runsOnFilter": "運行於",
     "runsOnSelected": "{count} 次運行於",

@@ -9,7 +9,6 @@
       "signInCaption": "파트너 노드에는 계정이 필요합니다",
       "signInToRun": "실행하려면 로그인"
     },
-    "share": "공유",
     "shareTooltip": "워크플로우 공유"
   },
   "agent": {
@@ -717,6 +716,8 @@
         "selectAtLeastOne": "최소 한 가지 옵션을 선택해 주세요."
       },
       "intro": "ComfyUI 경험을 맞춤화할 수 있도록 도와주세요.",
+      "navigationFailed": "설문조사는 저장되었지만 온보딩을 계속할 수 없습니다",
+      "navigationFailedDetail": "다시 시도하세요.",
       "options": {
         "experience": {
           "new": "ComfyUI가 처음이에요",
@@ -757,6 +758,8 @@
       },
       "otherPlaceholder": "자세히 알려주세요",
       "placeholder": "설문 질문 자리표시자",
+      "submitFailed": "설문조사를 제출할 수 없습니다",
+      "submitFailedDetail": "응답이 저장되지 않았습니다. 다시 시도하세요.",
       "title": "클라우드 설문"
     }
   },
@@ -2100,6 +2103,9 @@
     "updating": "{id} 업데이트 중",
     "upload": "업로드",
     "uploadAlreadyInProgress": "업로드가 이미 진행 중입니다",
+    "uploadFailed": "업로드 실패: {reason}",
+    "uploadFileTooLarge": "파일이 너무 커서 업로드할 수 없습니다.",
+    "uploadFileTooLargeWithLimit": "파일이 너무 커서 업로드할 수 없습니다(제한: {limit}MB).",
     "uploadTimedOut": "업로드 시간이 초과되었습니다. 다시 시도해 주세요.",
     "usageHint": "사용 힌트",
     "use": "사용",
@@ -3090,6 +3096,7 @@
     "Refresh Node Definitions": "노드 정의 새로 고침",
     "Reinstall": "재설치",
     "Rename": "이름 바꾸기",
+    "Replay Onboarding": "온보딩 다시 실행",
     "Reset View": "보기 초기화",
     "Resize Selected Nodes": "선택된 노드 크기 조정",
     "Restart": "재시작",
@@ -3282,6 +3289,7 @@
     "mask": "마스크",
     "merging": "병합",
     "mesh": "메시",
+    "ming image": "ming image",
     "minimax": "minimax",
     "minimax music": "minimax music",
     "mochi": "mochi",
@@ -3542,6 +3550,12 @@
     "next": "다음",
     "skip": "건너뛰기",
     "stepLabel": "단계 {current} / {total}"
+  },
+  "onboardingReplay": {
+    "confirmMessage": "ComfyUI를 다시 로드하고 이 환경에서 사용할 수 있는 온보딩 단계를 초기화합니다. 워크플로에는 영향을 주지 않습니다.",
+    "confirmTitle": "온보딩을 다시 실행하시겠습니까?",
+    "failedDetail": "온보딩 상태를 초기화할 수 없습니다. 다시 시도하세요.",
+    "failedSummary": "온보딩을 다시 실행할 수 없습니다"
   },
   "openSharedWorkflow": {
     "author": "작성자:",
@@ -4812,6 +4826,7 @@
     "clearAllFilters": "모든 필터 지우기",
     "error": {
       "loading": "템플릿을 열 수 없습니다. 다시 시도해 주세요.",
+      "preparingMedia": "일부 예제 미디어를 준비할 수 없습니다. 워크플로는 열리며, 누락된 입력에는 직접 파일을 선택하세요.",
       "templateNotFound": "템플릿 \"{templateName}\"을(를) 찾을 수 없음"
     },
     "filtersApplied": "{count}개 필터 적용됨",
@@ -4828,6 +4843,7 @@
       "credits": "크레딧으로 실행",
       "title": "프리미엄 템플릿"
     },
+    "preparingMedia": "예제 미디어 준비 중...",
     "resultsCount": "{total}개 중 {count}개 템플릿 표시",
     "runsOnFilter": "실행 환경",
     "runsOnSelected": "{count}회 실행됨",

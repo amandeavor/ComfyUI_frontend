@@ -9,7 +9,6 @@
       "signInCaption": "Les nœuds partenaires nécessitent un compte",
       "signInToRun": "Connectez-vous pour exécuter"
     },
-    "share": "Partager",
     "shareTooltip": "Partager le workflow"
   },
   "agent": {
@@ -717,6 +716,8 @@
         "selectAtLeastOne": "Veuillez sélectionner au moins une option."
       },
       "intro": "Aidez-nous à personnaliser votre expérience ComfyUI.",
+      "navigationFailed": "Le sondage a été enregistré, mais l'intégration n'a pas pu continuer",
+      "navigationFailedDetail": "Veuillez réessayer.",
       "options": {
         "experience": {
           "new": "Nouveau sur ComfyUI",
@@ -757,6 +758,8 @@
       },
       "otherPlaceholder": "Dites-nous en plus",
       "placeholder": "Texte indicatif des questions de l'enquête",
+      "submitFailed": "Impossible d'envoyer le sondage",
+      "submitFailedDetail": "Vos réponses n'ont pas été enregistrées. Veuillez réessayer.",
       "title": "Enquête Cloud"
     }
   },
@@ -2100,6 +2103,9 @@
     "updating": "Mise à jour de {id}",
     "upload": "Téléverser",
     "uploadAlreadyInProgress": "Téléversement déjà en cours",
+    "uploadFailed": "Échec de l'envoi : {reason}",
+    "uploadFileTooLarge": "Le fichier est trop volumineux pour être envoyé.",
+    "uploadFileTooLargeWithLimit": "Le fichier est trop volumineux pour être envoyé (limite : {limit} Mo).",
     "uploadTimedOut": "Le téléchargement a expiré. Veuillez réessayer.",
     "usageHint": "Conseil d'utilisation",
     "use": "Utiliser",
@@ -3090,6 +3096,7 @@
     "Refresh Node Definitions": "Actualiser les définitions de nœud",
     "Reinstall": "Réinstaller",
     "Rename": "Renommer",
+    "Replay Onboarding": "Rejouer l'intégration",
     "Reset View": "Réinitialiser la vue",
     "Resize Selected Nodes": "Redimensionner les nœuds sélectionnés",
     "Restart": "Redémarrer",
@@ -3282,6 +3289,7 @@
     "mask": "masque",
     "merging": "fusion",
     "mesh": "maillage",
+    "ming image": "ming image",
     "minimax": "minimax",
     "minimax music": "minimax music",
     "mochi": "mochi",
@@ -3542,6 +3550,12 @@
     "next": "Suivant",
     "skip": "Passer",
     "stepLabel": "Étape {current} sur {total}"
+  },
+  "onboardingReplay": {
+    "confirmMessage": "Cela recharge ComfyUI et réinitialise les étapes d'intégration disponibles dans cet environnement. Vos workflows ne sont pas affectés.",
+    "confirmTitle": "Rejouer l'intégration ?",
+    "failedDetail": "Votre état d'intégration n'a pas pu être réinitialisé. Veuillez réessayer.",
+    "failedSummary": "Impossible de rejouer l'intégration"
   },
   "openSharedWorkflow": {
     "author": "Auteur :",
@@ -4812,6 +4826,7 @@
     "clearAllFilters": "Effacer tous les filtres",
     "error": {
       "loading": "Impossible d’ouvrir le modèle. Veuillez réessayer.",
+      "preparingMedia": "Certains médias d'exemple n'ont pas pu être préparés. Le workflow va s'ouvrir ; choisissez vos propres fichiers pour toute entrée manquante.",
       "templateNotFound": "Modèle \"{templateName}\" introuvable"
     },
     "filtersApplied": "{count} filtre appliqué | {count} filtres appliqués",
@@ -4828,6 +4843,7 @@
       "credits": "S'exécute avec des crédits",
       "title": "Modèle premium"
     },
+    "preparingMedia": "Préparation des médias d'exemple...",
     "resultsCount": "Affichage de {count} sur {total} modèles",
     "runsOnFilter": "Exécute sur",
     "runsOnSelected": "{count} exécutions sur",

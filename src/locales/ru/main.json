@@ -9,7 +9,6 @@
       "signInCaption": "Для партнёрских нод требуется аккаунт",
       "signInToRun": "Войти для запуска"
     },
-    "share": "Поделиться",
     "shareTooltip": "Поделиться рабочим процессом"
   },
   "agent": {
@@ -717,6 +716,8 @@
         "selectAtLeastOne": "Пожалуйста, выберите хотя бы один вариант."
       },
       "intro": "Помогите нам адаптировать ваш опыт работы с ComfyUI.",
+      "navigationFailed": "Опрос сохранён, но не удалось продолжить онбординг",
+      "navigationFailedDetail": "Повторите попытку.",
       "options": {
         "experience": {
           "new": "Впервые в ComfyUI",
@@ -757,6 +758,8 @@
       },
       "otherPlaceholder": "Расскажите подробнее",
       "placeholder": "Вопросы для опроса",
+      "submitFailed": "Не удалось отправить опрос",
+      "submitFailedDetail": "Ваши ответы не были сохранены. Повторите попытку.",
       "title": "Облачный опрос"
     }
   },
@@ -2100,6 +2103,9 @@
     "updating": "Обновление {id}",
     "upload": "Загрузить",
     "uploadAlreadyInProgress": "Загрузка уже выполняется",
+    "uploadFailed": "Не удалось загрузить файл: {reason}",
+    "uploadFileTooLarge": "Файл слишком большой для загрузки.",
+    "uploadFileTooLargeWithLimit": "Файл слишком большой для загрузки (лимит: {limit} МБ).",
     "uploadTimedOut": "Время загрузки истекло. Пожалуйста, попробуйте еще раз.",
     "usageHint": "Подсказка по использованию",
     "use": "Использовать",
@@ -3090,6 +3096,7 @@
     "Refresh Node Definitions": "Обновить определения нод",
     "Reinstall": "Переустановить",
     "Rename": "Переименовать",
+    "Replay Onboarding": "Повторить онбординг",
     "Reset View": "Сбросить вид",
     "Resize Selected Nodes": "Изменить размер выбранных узлов",
     "Restart": "Перезапустить",
@@ -3282,6 +3289,7 @@
     "mask": "маска",
     "merging": "слияние",
     "mesh": "сетка",
+    "ming image": "ming image",
     "minimax": "minimax",
     "minimax music": "музыка minimax",
     "mochi": "mochi",
@@ -3542,6 +3550,12 @@
     "next": "Далее",
     "skip": "Пропустить",
     "stepLabel": "Шаг {current} из {total}"
+  },
+  "onboardingReplay": {
+    "confirmMessage": "Это перезагрузит ComfyUI и сбросит шаги онбординга, доступные в этой среде. Ваши рабочие процессы не будут затронуты.",
+    "confirmTitle": "Повторить онбординг?",
+    "failedDetail": "Не удалось сбросить состояние онбординга. Повторите попытку.",
+    "failedSummary": "Не удалось повторить онбординг"
   },
   "openSharedWorkflow": {
     "author": "Автор:",
@@ -4812,6 +4826,7 @@
     "clearAllFilters": "Сбросить все фильтры",
     "error": {
       "loading": "Не удалось открыть шаблон. Попробуйте ещё раз.",
+      "preparingMedia": "Не удалось подготовить некоторые примеры медиафайлов. Рабочий процесс будет открыт; выберите собственные файлы для всех отсутствующих входных данных.",
       "templateNotFound": "Шаблон \"{templateName}\" не найден"
     },
     "filtersApplied": "{count} фильтр применён | {count} фильтра применено | {count} фильтров применено",
@@ -4828,6 +4843,7 @@
       "credits": "Запускается с использованием кредитов",
       "title": "Премиум-шаблон"
     },
+    "preparingMedia": "Подготовка примеров медиафайлов...",
     "resultsCount": "Показано {count} из {total} шаблонов",
     "runsOnFilter": "Запускается на",
     "runsOnSelected": "{count} запусков на",

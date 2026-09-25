@@ -9,7 +9,6 @@
       "signInCaption": "צומתי שותפים מחייבים חשבון",
       "signInToRun": "התחברות להפעלה"
     },
-    "share": "שיתוף",
     "shareTooltip": "שיתוף תהליך העבודה"
   },
   "agent": {
@@ -717,6 +716,8 @@
         "selectAtLeastOne": "אנא בחר לפחות אפשרות אחת."
       },
       "intro": "עזרו לנו להתאים את חוויית ה-ComfyUI שלך.",
+      "navigationFailed": "הסקר נשמר, אך לא ניתן היה להמשיך בתהליך ההיכרות",
+      "navigationFailedDetail": "נסה שוב.",
       "options": {
         "experience": {
           "new": "חדש/ה ב-ComfyUI",
@@ -757,6 +758,8 @@
       },
       "otherPlaceholder": "ספרו לנו עוד",
       "placeholder": "מציין מיקום לשאלות הסקר",
+      "submitFailed": "לא ניתן היה לשלוח את הסקר",
+      "submitFailedDetail": "התשובות שלך לא נשמרו. נסה שוב.",
       "title": "סקר ענן"
     }
   },
@@ -2100,6 +2103,9 @@
     "updating": "מעדכן את {id}",
     "upload": "העלאה",
     "uploadAlreadyInProgress": "העלאה כבר מתבצעת",
+    "uploadFailed": "ההעלאה נכשלה: {reason}",
+    "uploadFileTooLarge": "הקובץ גדול מדי להעלאה.",
+    "uploadFileTooLargeWithLimit": "הקובץ גדול מדי להעלאה (מגבלה: {limit} MB).",
     "uploadTimedOut": "תם הזמן הקצוב להעלאה. נסה שוב.",
     "usageHint": "רמז שימוש",
     "use": "שימוש",
@@ -3090,6 +3096,7 @@
     "Refresh Node Definitions": "רענון הגדרות הצמתים",
     "Reinstall": "התקנה מחדש",
     "Rename": "שינוי שם",
+    "Replay Onboarding": "הפעלת תהליך ההיכרות מחדש",
     "Reset View": "איפוס התצוגה",
     "Resize Selected Nodes": "שינוי גודל הצמתים הנבחרים",
     "Restart": "הפעלה מחדש",
@@ -3282,6 +3289,7 @@
     "mask": "mask",
     "merging": "merging",
     "mesh": "רשת",
+    "ming image": "ming image",
     "minimax": "minimax",
     "minimax music": "מוזיקת minimax",
     "mochi": "mochi",
@@ -3542,6 +3550,12 @@
     "next": "הבא",
     "skip": "דלג",
     "stepLabel": "שלב {current} מתוך {total}"
+  },
+  "onboardingReplay": {
+    "confirmMessage": "פעולה זו תטען מחדש את ComfyUI ותאפס את שלבי תהליך ההיכרות הזמינים בסביבה זו. תהליכי העבודה שלך לא יושפעו.",
+    "confirmTitle": "להפעיל מחדש את תהליך ההיכרות?",
+    "failedDetail": "לא ניתן היה לאפס את מצב תהליך ההיכרות שלך. נסה שוב.",
+    "failedSummary": "לא ניתן היה להפעיל מחדש את תהליך ההיכרות"
   },
   "openSharedWorkflow": {
     "author": "יוצר:",
@@ -4812,6 +4826,7 @@
     "clearAllFilters": "נקה את כל המסננים",
     "error": {
       "loading": "לא ניתן היה לפתוח את התבנית. נסו שוב.",
+      "preparingMedia": "לא ניתן היה להכין חלק מקובצי המדיה לדוגמה. תהליך העבודה ייפתח; בחר קבצים משלך עבור קלטים חסרים.",
       "templateNotFound": "התבנית \"{templateName}\" לא נמצאה"
     },
     "filtersApplied": "{count} מסנן הופעל | {count} מסננים הופעלו",
@@ -4828,6 +4843,7 @@
       "credits": "הרצה באמצעות קרדיטים",
       "title": "תבנית פרימיום"
     },
+    "preparingMedia": "מכין קובצי מדיה לדוגמה...",
     "resultsCount": "מציג {count} מתוך {total} תבניות",
     "runsOnFilter": "פועל על",
     "runsOnSelected": "{count} פועל על",

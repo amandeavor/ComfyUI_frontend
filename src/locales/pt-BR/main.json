@@ -9,7 +9,6 @@
       "signInCaption": "Nós parceiros exigem uma conta",
       "signInToRun": "Entre para executar"
     },
-    "share": "Compartilhar",
     "shareTooltip": "Compartilhar fluxo de trabalho"
   },
   "agent": {
@@ -717,6 +716,8 @@
         "selectAtLeastOne": "Por favor, selecione pelo menos uma opção."
       },
       "intro": "Ajude-nos a personalizar sua experiência no ComfyUI.",
+      "navigationFailed": "A pesquisa foi salva, mas não foi possível continuar a integração inicial",
+      "navigationFailedDetail": "Tente novamente.",
       "options": {
         "experience": {
           "new": "Novo no ComfyUI",
@@ -757,6 +758,8 @@
       },
       "otherPlaceholder": "Conte-nos mais",
       "placeholder": "Espaço reservado para perguntas da pesquisa",
+      "submitFailed": "Não foi possível enviar a pesquisa",
+      "submitFailedDetail": "Suas respostas não foram salvas. Tente novamente.",
       "title": "Pesquisa da Nuvem"
     }
   },
@@ -2100,6 +2103,9 @@
     "updating": "Atualizando {id}",
     "upload": "Enviar",
     "uploadAlreadyInProgress": "O upload já está em andamento",
+    "uploadFailed": "Falha no envio: {reason}",
+    "uploadFileTooLarge": "O arquivo é grande demais para enviar.",
+    "uploadFileTooLargeWithLimit": "O arquivo é grande demais para enviar (limite: {limit} MB).",
     "uploadTimedOut": "O envio excedeu o tempo limite. Por favor, tente novamente.",
     "usageHint": "Dica de uso",
     "use": "Usar",
@@ -3090,6 +3096,7 @@
     "Refresh Node Definitions": "Atualizar definições de nós",
     "Reinstall": "Reinstalar",
     "Rename": "Renomear",
+    "Replay Onboarding": "Repetir integração inicial",
     "Reset View": "Redefinir visualização",
     "Resize Selected Nodes": "Redimensionar nós selecionados",
     "Restart": "Reiniciar",
@@ -3282,6 +3289,7 @@
     "mask": "máscara",
     "merging": "mesclagem",
     "mesh": "malha",
+    "ming image": "ming image",
     "minimax": "minimax",
     "minimax music": "minimax music",
     "mochi": "mochi",
@@ -3542,6 +3550,12 @@
     "next": "Próximo",
     "skip": "Pular",
     "stepLabel": "Etapa {current} de {total}"
+  },
+  "onboardingReplay": {
+    "confirmMessage": "Isso recarrega o ComfyUI e redefine as etapas de integração inicial disponíveis neste ambiente. Seus fluxos de trabalho não serão afetados.",
+    "confirmTitle": "Repetir a integração inicial?",
+    "failedDetail": "Não foi possível redefinir o estado da integração inicial. Tente novamente.",
+    "failedSummary": "Não foi possível repetir a integração inicial"
   },
   "openSharedWorkflow": {
     "author": "Autor:",
@@ -4812,6 +4826,7 @@
     "clearAllFilters": "Limpar todos os filtros",
     "error": {
       "loading": "Não foi possível abrir o modelo. Tente novamente.",
+      "preparingMedia": "Não foi possível preparar algumas mídias de exemplo. O fluxo de trabalho será aberto; escolha seus próprios arquivos para quaisquer entradas ausentes.",
       "templateNotFound": "Modelo \"{templateName}\" não encontrado"
     },
     "filtersApplied": "{count} filtro aplicado | {count} filtros aplicados",
@@ -4828,6 +4843,7 @@
       "credits": "Executa com créditos",
       "title": "Template premium"
     },
+    "preparingMedia": "Preparando mídia de exemplo...",
     "resultsCount": "Mostrando {count} de {total} modelos",
     "runsOnFilter": "Executa em",
     "runsOnSelected": "{count} Execuções em",

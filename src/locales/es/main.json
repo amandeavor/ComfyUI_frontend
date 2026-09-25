@@ -9,7 +9,6 @@
       "signInCaption": "Los nodos asociados requieren una cuenta",
       "signInToRun": "Inicia sesión para ejecutar"
     },
-    "share": "Compartir",
     "shareTooltip": "Compartir flujo de trabajo"
   },
   "agent": {
@@ -717,6 +716,8 @@
         "selectAtLeastOne": "Por favor, selecciona al menos una opción."
       },
       "intro": "Ayúdanos a personalizar tu experiencia con ComfyUI.",
+      "navigationFailed": "La encuesta se guardó, pero no se pudo continuar con la incorporación",
+      "navigationFailedDetail": "Inténtalo de nuevo.",
       "options": {
         "experience": {
           "new": "Nuevo en ComfyUI",
@@ -757,6 +758,8 @@
       },
       "otherPlaceholder": "Cuéntanos más",
       "placeholder": "Marcador de posición para preguntas de la encuesta",
+      "submitFailed": "No se pudo enviar la encuesta",
+      "submitFailedDetail": "Tus respuestas no se guardaron. Inténtalo de nuevo.",
       "title": "Encuesta en la Nube"
     }
   },
@@ -2100,6 +2103,9 @@
     "updating": "Actualizando {id}",
     "upload": "Subir",
     "uploadAlreadyInProgress": "La carga ya está en curso",
+    "uploadFailed": "Error al subir: {reason}",
+    "uploadFileTooLarge": "El archivo es demasiado grande para subirlo.",
+    "uploadFileTooLargeWithLimit": "El archivo es demasiado grande para subirlo (límite: {limit} MB).",
     "uploadTimedOut": "La carga ha excedido el tiempo de espera. Por favor, inténtalo de nuevo.",
     "usageHint": "Sugerencia de uso",
     "use": "Usar",
@@ -3090,6 +3096,7 @@
     "Refresh Node Definitions": "Actualizar definiciones de nodo",
     "Reinstall": "Reinstalar",
     "Rename": "Renombrar",
+    "Replay Onboarding": "Repetir la incorporación",
     "Reset View": "Restablecer vista",
     "Resize Selected Nodes": "Redimensionar Nodos Seleccionados",
     "Restart": "Reiniciar",
@@ -3282,6 +3289,7 @@
     "mask": "mask",
     "merging": "fusión",
     "mesh": "malla",
+    "ming image": "ming image",
     "minimax": "minimax",
     "minimax music": "minimax music",
     "mochi": "mochi",
@@ -3542,6 +3550,12 @@
     "next": "Siguiente",
     "skip": "Omitir",
     "stepLabel": "Paso {current} de {total}"
+  },
+  "onboardingReplay": {
+    "confirmMessage": "Esto recarga ComfyUI y restablece los pasos de incorporación disponibles en este entorno. Tus flujos de trabajo no se verán afectados.",
+    "confirmTitle": "¿Repetir la incorporación?",
+    "failedDetail": "No se pudo restablecer tu estado de incorporación. Inténtalo de nuevo.",
+    "failedSummary": "No se pudo repetir la incorporación"
   },
   "openSharedWorkflow": {
     "author": "Autor:",
@@ -4812,6 +4826,7 @@
     "clearAllFilters": "Borrar todos los filtros",
     "error": {
       "loading": "No se pudo abrir la plantilla. Inténtalo de nuevo.",
+      "preparingMedia": "No se pudieron preparar algunos archivos multimedia de ejemplo. El flujo de trabajo se abrirá; elige tus propios archivos para cualquier entrada que falte.",
       "templateNotFound": "Plantilla \"{templateName}\" no encontrada"
     },
     "filtersApplied": "{count} filtro aplicado | {count} filtros aplicados",
@@ -4828,6 +4843,7 @@
       "credits": "Se ejecuta con créditos",
       "title": "Plantilla premium"
     },
+    "preparingMedia": "Preparando archivos multimedia de ejemplo...",
     "resultsCount": "Mostrando {count} de {total} plantillas",
     "runsOnFilter": "Ejecuta en",
     "runsOnSelected": "{count} ejecuciones en",
