@@ -88,7 +88,7 @@ describe('offline workflow previews', () => {
     (name) => {
       const directory = join(
         import.meta.dirname,
-        '../public/workflows/prepared'
+        '../public/models/workflow-graphs'
       )
       const raw: unknown = JSON.parse(
         readFileSync(join(directory, `${name}.json`), 'utf8')
